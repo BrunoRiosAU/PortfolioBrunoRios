@@ -3,7 +3,8 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
-  margin: -10px;
+  width: 100%;
+
 }
 
 nav ul {
@@ -29,4 +30,9 @@ nav a:hover {
 
 #en, #es{
   display: none;
+}
+
+
+body{
+  margin: 0;
 }

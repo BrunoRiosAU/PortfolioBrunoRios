@@ -1,5 +1,5 @@
 "use client"
-import styles from "./globals.css";
+import "./globals.css";
 import toggleLanguage from "./language/toggleLanguage"
 import getLanguage from "./language/getLanguage";
 
