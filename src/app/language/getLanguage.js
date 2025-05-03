@@ -28,9 +28,9 @@ export default function getLanguage() {
 
         // Show the correct language
         if (cookieLang == "lang=es") {
-            $('#es').show();
+            $('#es').css({'display':'block'});
         } else {
-            $('#en').show();
+            $('#en').css({'display':'block'});
         }
     });
 }
