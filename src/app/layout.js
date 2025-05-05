@@ -1,12 +1,11 @@
 "use client"
 import "./globals.css";
-import toggleLanguage from "./language/toggleLanguage"
-import getLanguage from "./language/getLanguage";
+
 
 
 
 export default function RootLayout({ children }) {
-    getLanguage()
+
     return (
         <html lang="en">
             
@@ -25,12 +24,7 @@ export default function RootLayout({ children }) {
                     </nav>
                 </header>
 
-                <p id="en">Ingles</p>
-                <p id="es">Español</p>
-
-                <button onClick={toggleLanguage}>Toggle Idioma</button>
                 
-
                 {children}
             </body>
         </html>
