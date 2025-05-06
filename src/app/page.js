@@ -1,18 +1,6 @@
+export default function HomePage() {
 
-import styles from "./page.module.css";
-
-
-
-
-
-export default function Home() {
-  return (
-    <div>
-      <p>Home</p>
-
-    </div>
-  );
+    return (
+        <p>Nt</p>
+    );
 }
-
-
-
