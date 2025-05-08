@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
                         <p className="secondary-text">Soriano Uruguay</p>
                     </div>
                     <div className="hamburgermenu">
-                        <button className="hamburgerbutton" onClick={() => setIsOpen(!isOpen)}>☰</button>
+                        <button className={`${!isOpen ? 'hamburgerbutton primary-text' : 'hamburgerhidden'}`} onClick={() => setIsOpen(!isOpen)}>Menu</button>
                     </div>
                     <div className="menu">
                         <p className="primary-text">Home</p>
@@ -30,8 +30,11 @@ export default function RootLayout({ children }) {
                 </header>
 
                 <div className={`${isOpen ? 'hamburgerdisplay' : 'hamburgerhidden'}`}>
-
-                    <p className="primary-text">Hola puta de mierda</p>
+                    <button className="hamburgerbutton primary-text" onClick={() => setIsOpen(!isOpen)}>Close</button>
+                    <p className="primary-text">Home</p>
+                    <p className="primary-text">Proyects</p>
+                    <p className="primary-text">About Me</p>
+                    <p className="primary-text">Contact Me</p>
                 </div>
 
 
