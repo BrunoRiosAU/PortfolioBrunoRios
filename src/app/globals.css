@@ -171,3 +171,12 @@ footer {
 .menusocials p:nth-of-type(2){
   padding: 0 5%;
 }
+
+.menusocials p {
+  transition: all 0.3s ease;
+}
+
+.menusocials p:hover {
+  transform: scale(1.06);
+  font-variation-settings: "wght" 800;
+}
