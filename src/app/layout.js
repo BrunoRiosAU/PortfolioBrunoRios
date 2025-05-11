@@ -40,6 +40,18 @@ export default function RootLayout({ children }) {
 
 
                 {children}
+
+                <footer>
+                    <div className="menusocials">
+                        <p className="primary-text">Github</p>
+                        <p className="primary-text">Linkedin</p>
+                        <p className="primary-text">Instagram</p>
+                    </div>
+                    <div className="designedby">
+                        <p className="primary-text">Develop and designed by Bruno Ríos</p>
+                    </div>
+                    
+                </footer>
             </body>
         </html>
     );

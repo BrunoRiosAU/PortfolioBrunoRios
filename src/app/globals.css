@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-main{
+main {
   margin-top: 100px;
 }
 
@@ -29,7 +29,7 @@ header {
   top: 0;
   left: 0;
   width: 95%;
-  background: linear-gradient(to bottom,var(--background-color) 70%, transparent);
+  background: linear-gradient(to bottom, var(--background-color) 70%, transparent);
   justify-content: space-between;
   display: flex;
   padding: 10px 3%;
@@ -63,13 +63,31 @@ header {
   .menu {
     display: none;
   }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer div{
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 801px) {
-  .hamburgermenu, .hamburgerbutton, .showhamburgerbutton {
+
+  .hamburgermenu,
+  .hamburgerbutton,
+  .showhamburgerbutton {
     display: none;
   }
+
+  footer {
+    flex-direction: row-reverse;
+  }
+
+  
 }
+
 
 .hamburgerbutton {
   margin-top: 10px;
@@ -81,12 +99,12 @@ header {
   font-size: 18px;
 }
 
-.hidehamburgerbutton{
+.hidehamburgerbutton {
   opacity: 0;
 }
 
-.showhamburgerbutton{
- opacity: 100;
+.showhamburgerbutton {
+  opacity: 100;
 }
 
 .hamburgerhidden {
@@ -109,7 +127,7 @@ header {
   font-size: 18px;
 }
 
-.animationhidder{
+.animationhidder {
   position: fixed;
   top: 50px;
   right: 0;
@@ -120,19 +138,36 @@ header {
 }
 
 @keyframes showhamburgermenu {
-  0%{
+  0% {
     right: -120px;
   }
-  100%{
+
+  100% {
     right: 8px;
   }
 }
 
 @keyframes hidehamburgermenu {
-  0%{
+  0% {
     right: 8px;
   }
-  100%{
+
+  100% {
     right: -120px;
   }
+}
+
+footer {
+  display: flex;
+  padding: 3%;
+  justify-content: space-between;
+}
+
+.menusocials {
+  display:flex;
+  width: 194px;
+}
+
+.menusocials p:nth-of-type(2){
+  padding: 0 5%;
 }
