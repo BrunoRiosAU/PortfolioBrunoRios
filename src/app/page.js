@@ -1,6 +1,8 @@
 export default function HomePage() {
 
     return (
-        <p>Nt</p>
+        <main>
+            <p className="primary-text">Tetas</p>
+        </main>
     );
 }
