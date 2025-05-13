@@ -2,17 +2,15 @@
   --background-color: #171717;
   --primary-text-color: #fff;
   --secondary-text-color: #9b9b9b;
-
 }
+
 
 body {
   background-color: var(--background-color);
   margin: 0;
 }
 
-main {
-  margin-top: 100px;
-}
+
 
 .primary-text {
   color: var(--primary-text-color);
@@ -23,6 +21,9 @@ main {
   color: var(--secondary-text-color);
   font-family: Cambria
 }
+
+
+/* Layout */
 
 header {
   position: fixed;
@@ -68,7 +69,7 @@ header {
     flex-direction: column;
   }
 
-  footer div{
+  footer div {
     margin: 0 auto;
   }
 }
@@ -85,7 +86,7 @@ header {
     flex-direction: row-reverse;
   }
 
-  
+
 }
 
 
@@ -131,9 +132,8 @@ header {
   position: fixed;
   top: 50px;
   right: 0;
-  height: 200px;
+  height: 152px;
   width: 119px;
-  z-index: 2;
   background-color: var(--background-color);
 }
 
@@ -164,11 +164,11 @@ footer {
 }
 
 .menusocials {
-  display:flex;
+  display: flex;
   width: 194px;
 }
 
-.menusocials p:nth-of-type(2){
+.menusocials p:nth-of-type(2) {
   padding: 0 5%;
 }
 
@@ -180,3 +180,5 @@ footer {
   transform: scale(1.06);
   font-variation-settings: "wght" 800;
 }
+
+

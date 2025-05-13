@@ -1,0 +1,48 @@
+.main {
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.ocupation {
+    font-size: 20px;
+    text-align: center;
+}
+
+.inline {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+.showOcupation {
+    animation: showOcupation 3s forwards;
+}
+
+.hideOcupation {
+    animation: hideOcupation 3s forwards;
+}
+
+@keyframes showOcupation {
+    0% {
+        opacity: 0%;
+        top: -30px
+    }
+
+    100% {
+        opacity: 100%;
+        top: 0;
+    }
+}
+
+@keyframes hideOcupation {
+    0% {
+        opacity: 100%;
+        bottom: 0;
+    }
+
+    100% {
+        opacity: 0%;
+        bottom: -30px;
+    }
+}
