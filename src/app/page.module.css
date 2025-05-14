@@ -5,8 +5,8 @@
 }
 
 .ocupation {
-    font-size: 20px;
     text-align: center;
+    
 }
 
 .inline {
@@ -16,11 +16,21 @@
 }
 
 .showOcupation {
-    animation: showOcupation 3s forwards;
+    animation: showOcupation 9s forwards;
 }
 
-.hideOcupation {
-    animation: hideOcupation 3s forwards;
+
+@media (max-width: 800px) {
+  .ocupation{
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 801px) {
+
+  .ocupation{
+    font-size: 30px;
+  }
 }
 
 @keyframes showOcupation {
@@ -28,21 +38,19 @@
         opacity: 0%;
         top: -30px
     }
-
-    100% {
+    10%{
         opacity: 100%;
         top: 0;
     }
-}
 
-@keyframes hideOcupation {
-    0% {
+    90%{
         opacity: 100%;
-        bottom: 0;
+        top: 0;
     }
 
     100% {
         opacity: 0%;
-        bottom: -30px;
+        top: 30px;
     }
 }
+
