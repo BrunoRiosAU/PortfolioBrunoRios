@@ -5,8 +5,8 @@
 }
 
 .ocupation {
-    text-align: center;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inline {
@@ -16,13 +16,14 @@
 }
 
 .showOcupation {
-    animation: showOcupation 9s forwards;
+    animation: showOcupation 7s forwards;
 }
 
 
 @media (max-width: 800px) {
   .ocupation{
     font-size: 18px;
+    width: 387px;
   }
 }
 
@@ -30,6 +31,7 @@
 
   .ocupation{
     font-size: 30px;
+    width: 618px;
   }
 }
 
