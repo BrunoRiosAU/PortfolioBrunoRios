@@ -33,6 +33,7 @@ export default function HomePage() {
             <div>
                 <button>About me</button>
                 <button>My projects</button>
+                
             </div>
 
         </main>
