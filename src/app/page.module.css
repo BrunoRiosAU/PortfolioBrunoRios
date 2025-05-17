@@ -9,11 +9,13 @@
     margin-right: auto;
 }
 
+
 .inline {
     position: relative;
     display: inline-block;
     margin: 0 10px 0 10px;
 }
+
 
 .showOcupation {
     animation: showOcupation 7s forwards;
