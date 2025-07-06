@@ -30,12 +30,9 @@ export default function HomePage() {
                 <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primary-text`}>{ocupations[index]}</h1>
             </div>
 
-            <div>
-                <button>About me</button>
-                <button>My projects</button>
-                
-
-                
+            <div className={`${styles.mainMenuButtons}`}>
+                <button className="primary-text">About me</button>
+                <button className="primary-text">My projects</button>
             </div>
 
         </main>
