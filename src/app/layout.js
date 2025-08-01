@@ -1,10 +1,16 @@
 "use client"
 import "./globals.css";
 import { useState } from 'react';
+import { Instagram, Github, Linkedin } from "lucide-react";
 
 export default function RootLayout({ children }) {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
+    function toggleMenu(){
+        setIsOpen(!isOpen);
+        setIsLoaded(true);
+    }
 
     return (
         <html lang="en">
@@ -17,7 +23,7 @@ export default function RootLayout({ children }) {
                         <p className="secondary-text">Soriano Uruguay</p>
                     </div>
                     <div className="hamburgermenu">
-                        <button className={`${!isOpen ? 'showhamburgerbutton' : 'hidehamburgerbutton'} hamburgerbutton primary-text`} onClick={() => setIsOpen(!isOpen)}>Menu</button>
+                        <button className={`${!isOpen ? 'showhamburgerbutton' : 'hidehamburgerbutton'} hamburgerbutton primary-text`} onClick={() => toggleMenu()}>Menu</button>
 
                     </div>
                     <div className="menu">
@@ -27,14 +33,14 @@ export default function RootLayout({ children }) {
                         <p className="primary-text">Contact Me</p>
                     </div>
 
-                    <div className={`${isOpen ? 'hamburgerdisplay' : 'hamburgerhidden'} hamburgermenu`}>
-                        <button className={`${isOpen ? 'showhamburgerbutton' : 'hidehamburgerbutton'} hamburgerbutton primary-text`} onClick={() => setIsOpen(!isOpen)}>Close</button>
+                    <div className={`${isOpen ? 'hamburgerdisplay' : 'hamburgerhidden'} ${!isLoaded ? 'preload' : ''} hamburgermenu`}>
+                        <button className={`${isOpen ? 'showhamburgerbutton' : 'hidehamburgerbutton'} hamburgerbutton primary-text`} onClick={() => toggleMenu()}>Close</button>
                         <p className="primary-text">Home</p>
                         <p className="primary-text">Proyects</p>
                         <p className="primary-text">About Me</p>
                         <p className="primary-text">Contact Me</p>
                     </div>
-                    <div className="animationhidder hamburgerhidden"></div>
+                    
 
                 </header>
 
@@ -43,14 +49,14 @@ export default function RootLayout({ children }) {
 
                 <footer>
                     <div className="menusocials">
-                        <p className="primary-text">Github</p>
-                        <p className="primary-text">Linkedin</p>
-                        <p className="primary-text">Instagram</p>
+                        <p className="primary-text">Github<Github className="icon" color="white" size={20}/></p>
+                        <p className="primary-text">Linkedin<Linkedin className="icon" color="white" size={20}/></p>
+                        <p className="primary-text">Instagram<Instagram className="icon" color="white" size={20}/></p>
                     </div>
                     <div className="designedby">
                         <p className="primary-text">Develop and designed by Bruno Ríos</p>
                     </div>
-                    
+
                 </footer>
             </body>
         </html>

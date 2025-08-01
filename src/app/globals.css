@@ -125,6 +125,7 @@ header {
   top: 50px;
   right: -100px;
   padding-right: 20px;
+  border-radius: 10px;
   text-align: right;
   font-size: 18px;
   background-color: var(--background-color);
@@ -132,19 +133,10 @@ header {
 
 }
 
-.animationhidder {
-  position: fixed;
-  top: 50px;
-  right: 0;
-  height: 152px;
-  width: 119px;
-  background-color: var(--background-color);
-
-}
 
 @keyframes showhamburgermenu {
   0% {
-    right: -120px;
+    right: -140px;
   }
 
   100% {
@@ -158,8 +150,12 @@ header {
   }
 
   100% {
-    right: -120px;
+    right: -140px;
   }
+}
+
+.preload {
+  animation-duration: 0s !important;
 }
 
 footer {
@@ -170,7 +166,15 @@ footer {
 
 .menusocials {
   display: flex;
-  width: 194px;
+  width: 262px;
+}
+
+/*262*/
+
+.icon {
+  position:relative;
+  top:3px;
+  left: 4px;
 }
 
 .menusocials p:nth-of-type(2) {
@@ -185,5 +189,3 @@ footer {
   transform: scale(1.06);
   font-variation-settings: "wght" 800;
 }
-
-

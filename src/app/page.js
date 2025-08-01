@@ -18,7 +18,7 @@ export default function HomePage() {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % ocupations.length);
             setAnimationKey((prev) => prev + 1);
-        }, 7000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -31,8 +31,8 @@ export default function HomePage() {
             </div>
 
             <div className={`${styles.mainMenuButtons}`}>
-                <button className="primary-text">About me</button>
                 <button className="primary-text">My projects</button>
+                <button className="primary-text">About me </button>
             </div>
 
         </main>

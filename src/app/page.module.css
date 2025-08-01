@@ -20,7 +20,7 @@
 
 
 .showOcupation {
-    animation: showOcupation 7s forwards;
+    animation: showOcupation 5s forwards;
 }
 
 
@@ -83,7 +83,7 @@
 .mainMenuButtons {
     margin-left: auto;
     margin-right: auto;
-
+    transition: all 0.7s ease;
 }
 
 .mainMenuButtons button {
