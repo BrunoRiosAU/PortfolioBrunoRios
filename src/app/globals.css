@@ -68,6 +68,8 @@ header {
 
 .menu a {
   transition: all 0.3s ease;
+  margin-block-start: 1em;
+  height: 25px;
 }
 
 .menu a:hover {
@@ -117,24 +119,33 @@ header {
   box-shadow: -15px 15px 15px var(--background-color);
 }
 
+.hamburger-menu a{
+    display: block;
+    margin-block-start: 1em;
+}
+
 
 @keyframes show-hamburger-menu {
   0% {
     right: -160px;
+    opacity: 0;
   }
 
   100% {
     right: 8px;
+    opacity: 100;
   }
 }
 
 @keyframes hide-hamburger-menu {
   0% {
     right: 8px;
+    opacity: 100;
   }
 
   100% {
     right: -160px;
+    opacity: 0;
   }
 }
 
@@ -149,7 +160,7 @@ footer {
 
 .menu-socials {
   display: flex;
-  width: 262px;
+  width: 252px;
 }
 
 
@@ -164,7 +175,9 @@ footer {
 }
 
 .menu-socials a {
+  margin-block-start: 0.8em;
   transition: all 0.3s ease;
+  height: 25px;
 }
 
 .menu-socials a:hover {
@@ -194,8 +207,14 @@ footer {
 @media (min-width: 801px) {
 
   .hamburger-menu,
-  .hamburger-button,
-  .show-hamburger-button {
+  .hamburger-menu a,
+  .hamburger-button {
+    opacity: 0;
+    background-color: transparent;
+    box-shadow: 0px 0px;
+  }
+
+  .hamburger-menu a{
     display: none;
   }
 
