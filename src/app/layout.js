@@ -55,7 +55,6 @@ export default function RootLayout({ children }) {
                     </div>
                 </header>
 
-
                 {children}
 
                 <footer>
@@ -67,7 +66,6 @@ export default function RootLayout({ children }) {
                     <div className="designed-by">
                         <p className="primary-text">Develop and designed by Bruno Ríos</p>
                     </div>
-
                 </footer>
             </body>
         </html>

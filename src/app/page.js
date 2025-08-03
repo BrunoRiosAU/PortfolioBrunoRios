@@ -35,6 +35,8 @@ export default function HomePage() {
                 <button className="primary-text">About me </button>
             </div>
 
+
+            
         </main>
     );
 }
