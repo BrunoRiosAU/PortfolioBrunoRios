@@ -34,9 +34,6 @@ export default function HomePage() {
                 <button className="primary-text">My projects</button>
                 <button className="primary-text">About me </button>
             </div>
-
-
-            
         </main>
     );
 }
