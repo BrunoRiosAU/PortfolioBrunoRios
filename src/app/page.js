@@ -25,14 +25,52 @@ export default function HomePage() {
 
     return (
         <main className={styles.main}>
-            <div className={styles.ocupation}>
-                <h1 className={`${styles.inline} primary-text`}>Bruno Rios</h1>
-                <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primary-text`}>{ocupations[index]}</h1>
+            <div id="home">
+                <div className={`${styles.ocupation} ${styles.textShadow}`}>
+                    <h1 className={`${styles.inline} primary-text`}>Bruno Rios</h1>
+                    <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primary-text`}>{ocupations[index]}</h1>
+                </div>
+
+                <div className={`${styles.mainMenuButtons}`}>
+                    <button className="primary-text">My projects</button>
+                    <button className="primary-text">About me </button>
+                </div>
             </div>
 
-            <div className={`${styles.mainMenuButtons}`}>
-                <button className="primary-text">My projects</button>
-                <button className="primary-text">About me </button>
+            <div id="projects">
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Selected work</h2>
+                <div className={styles.projectsFrame}>
+                    <div className={styles.principalProject}>
+                        <h1 className="primary-text">dale</h1>
+                    </div>
+                    <div className={styles.secondaryProjectsBox}>
+                        <div className={styles.secondaryProject}>
+                            <h1 className="primary-text">dale don</h1>
+                        </div>
+                        <div className={styles.secondaryProject}>
+                            <h1 className="primary-text">dale</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="knowledge">
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>My knowledge</h2>
+
+
+            </div>
+
+            <div id="about">
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>About me</h2>
+
+
+            </div>
+
+            <div id="contact">
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Contact me</h2>
+
+
             </div>
         </main>
     );
