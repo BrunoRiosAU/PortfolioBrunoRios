@@ -41,14 +41,24 @@ export default function HomePage() {
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Selected work</h2>
                 <div className={styles.projectsFrame}>
                     <div className={styles.principalProject}>
-                        <h1 className="primary-text">dale</h1>
+                        <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
+                        <div className={styles.projectImage}>
+                            <img src="images/taiga.jpg" />
+                        </div>
+
                     </div>
-                    <div className={styles.secondaryProjectsBox}>
+                    <div className={styles.secondaryProjectBox}>
                         <div className={styles.secondaryProject}>
-                            <h1 className="primary-text">dale don</h1>
+                            <h1 className={`${styles.projectTitle} primary-text`}>dale don</h1>
+                            <div className={styles.projectImage}>
+                                <img src="images/taiga.jpg" />
+                            </div>
                         </div>
                         <div className={styles.secondaryProject}>
-                            <h1 className="primary-text">dale</h1>
+                            <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
+                            <div className={styles.projectImage}>
+                                <img src="images/taiga.jpg" />
+                            </div>
                         </div>
                     </div>
                 </div>

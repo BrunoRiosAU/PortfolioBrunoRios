@@ -14,7 +14,7 @@ export default async function Projects(){
 
 
 async function getProyects() {
-    const req = await fetch(`http://localhost:3000/projects.json`)
+    const req = await fetch(`http://localhost:3000/projectdata/projects.json`)
     const data = await req.json();
     return data;
 }
