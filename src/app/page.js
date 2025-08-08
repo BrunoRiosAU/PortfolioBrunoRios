@@ -40,26 +40,43 @@ export default function HomePage() {
             <div id="projects">
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Selected work</h2>
                 <div className={styles.projectsFrame}>
-                    <div className={styles.principalProject}>
-                        <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
-                        <div className={styles.projectImage}>
-                            <img src="images/taiga.jpg" />
-                        </div>
 
-                    </div>
-                    <div className={styles.secondaryProjectBox}>
-                        <div className={styles.secondaryProject}>
-                            <h1 className={`${styles.projectTitle} primary-text`}>dale don</h1>
-                            <div className={styles.projectImage}>
-                                <img src="images/taiga.jpg" />
-                            </div>
-                        </div>
-                        <div className={styles.secondaryProject}>
+                    <div className={styles.principalProject}>
+                        <a className={styles.projectLink} href="http://localhost:3000/projects/final">
                             <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
                             <div className={styles.projectImage}>
                                 <img src="images/taiga.jpg" />
                             </div>
+                            <p className={`${styles.projectClick} secondary-text`}>Touch to see more</p>
+                            <p className={`${styles.projectResume} primary-text`}>Resume</p>
+                        </a>
+                    </div>
+
+                    <div className={styles.secondaryProjectBox}>
+
+                        <div className={styles.secondaryProject}>
+                            <a className={styles.projectLink} href="http://localhost:3000/projects/final">
+                                <h1 className={`${styles.projectTitle} primary-text`}>dale don</h1>
+                                <div className={styles.projectImage}>
+                                    <img src="images/taiga.jpg" />
+                                </div>
+                                <p className={`${styles.projectClick} secondary-text`}>Touch to see more</p>
+                                <p className={`${styles.projectResume} primary-text`}>mesi</p>
+                            </a>
                         </div>
+
+
+                        <div className={styles.secondaryProject}>
+                            <a className={styles.projectLink} href="http://localhost:3000/projects/final">
+                                <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
+                                <div className={styles.projectImage}>
+                                    <img src="images/taiga.jpg" />
+                                </div>
+                                <p className={`${styles.projectClick} secondary-text`}>Touch to see more</p>
+                                <p className={`${styles.projectResume} primary-text`}>Resume</p>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 

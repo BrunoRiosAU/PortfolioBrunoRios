@@ -97,28 +97,47 @@
 .principalProject {
     border: 2px var(--secondary-text-color) solid;
     width: auto;
-
 }
 
 .secondaryProject {
     border: 2px var(--secondary-text-color) solid;
+}
 
+.principalProject:hover > a .projectTitle, .secondaryProject:hover > a .projectTitle{
+    text-shadow: 0px 2px 5px var(--secondary-text-color);
+}
+
+.principalProject:hover > a .projectResume, .secondaryProject:hover > a .projectResume{
+    text-shadow: 0px 5px 8px var(--secondary-text-color);
 }
 
 .projectTitle {
     transition: all 0.7s ease;
     margin-left: 30px;
-
 }
 
 .projectImage {
     display: flex;
     justify-content: center;
-    padding-bottom: 7%;
 }
 
 .projectImage img{
     width: 70%;
+}
+
+.projectResume{
+    text-align: center;
+    transition: all 0.7s ease;
+}
+
+.projectLink{
+    text-decoration: none;
+    cursor: url('../../public/images/atri.png'), auto;
+}
+
+.projectClick{
+    text-align: center;
+    margin-top: 0;
 }
 
 
@@ -160,6 +179,14 @@
         font-size: 23px;
     }
 
+    .projectResume {
+        font-size: 16px;
+    }
+
+    .projectClick{
+        display: block;
+    }
+
 }
 
 @media (min-width: 801px) {
@@ -183,6 +210,14 @@
 
     .projectTitle {
         font-size: 30px;
+    }
+
+    .projectResume {
+        font-size: 22px;
+    }
+
+    .projectClick{
+        display: none;
     }
 
 }
@@ -212,16 +247,24 @@
         width: 100%;
     }
 
-    .secondaryProject .projectTitle {
+    .secondaryProject a .projectTitle {
         font-size: 23px;
+    }
+
+    .secondaryProject a .projectResume {
+        font-size: 16px;
     }
 
 }
 
 @media (min-width: 1500px) {
 
-    .secondaryProject .projectTitle {
+    .secondaryProject a .projectTitle {
         font-size: 30px;
+    }
+
+    .secondaryProject a .projectResume {
+        font-size: 22px;
     }
 
 }
