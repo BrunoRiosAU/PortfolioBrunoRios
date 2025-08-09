@@ -53,7 +53,6 @@ export default function HomePage() {
                     </div>
 
                     <div className={styles.secondaryProjectBox}>
-
                         <div className={styles.secondaryProject}>
                             <a className={styles.projectLink} href="http://localhost:3000/projects/final">
                                 <h1 className={`${styles.projectTitle} primary-text`}>dale don</h1>
@@ -76,7 +75,6 @@ export default function HomePage() {
                                 <p className={`${styles.projectResume} primary-text`}>Resume</p>
                             </a>
                         </div>
-
                     </div>
                 </div>
 
