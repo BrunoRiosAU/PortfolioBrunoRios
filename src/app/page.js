@@ -24,6 +24,7 @@ export default function HomePage() {
     }, []);
 
     return (
+
         <main className={styles.main}>
             <div id="home">
                 <div className={`${styles.ocupation} ${styles.textShadow}`}>
@@ -98,5 +99,6 @@ export default function HomePage() {
 
             </div>
         </main>
+        
     );
 }
