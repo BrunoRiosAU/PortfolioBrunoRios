@@ -1,13 +1,14 @@
 "use client";
-
 import styles from "./page.module.css";
 import { useEffect, useState } from 'react';
+
 
 const ocupations = [
     'Front End',
     'Back End',
     'Full Stack'
 ];
+
 
 export default function HomePage() {
 
@@ -26,6 +27,7 @@ export default function HomePage() {
     return (
 
         <main className={styles.main}>
+
             <div id="home">
                 <div className={`${styles.ocupation} ${styles.textShadow}`}>
                     <h1 className={`${styles.inline} primary-text`}>Bruno Rios</h1>
