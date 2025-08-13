@@ -58,6 +58,45 @@
     }
 }
 
+/* Arrow */
+
+.homeArrowBox {
+    position: relative;
+    animation: arrow-movement 3s ease-in-out infinite;
+    top: 80px;
+}
+
+.homeArrow {
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 6px var(--secondary-text-color) solid;
+    border-right: 6px var(--secondary-text-color) solid;
+    transform: rotate(45deg) skew(-20deg, -20deg);
+    transition: all 0.7s ease;
+}
+
+
+@keyframes arrow-movement {
+    0% {
+
+        top: 80px;
+
+    }
+
+    50% {
+
+        top: 150px;
+
+    }
+
+    100% {
+
+        top: 80px;
+
+    }
+}
+
+
 /* Main menu Buttons */
 
 .mainMenuButtons {
@@ -83,8 +122,11 @@
 
 
 
-/* Home Sections */
+/* Sections */
 
+.homeSection {
+    padding-top: 70px;
+}
 
 /* Projects */
 
@@ -103,11 +145,13 @@
     border: 2px var(--secondary-text-color) solid;
 }
 
-.principalProject:hover > a .projectTitle, .secondaryProject:hover > a .projectTitle{
+.principalProject:hover>a .projectTitle,
+.secondaryProject:hover>a .projectTitle {
     text-shadow: 0px 2px 5px var(--secondary-text-color);
 }
 
-.principalProject:hover > a .projectResume, .secondaryProject:hover > a .projectResume{
+.principalProject:hover>a .projectResume,
+.secondaryProject:hover>a .projectResume {
     text-shadow: 0px 5px 8px var(--secondary-text-color);
 }
 
@@ -121,21 +165,21 @@
     justify-content: center;
 }
 
-.projectImage img{
+.projectImage img {
     width: 70%;
 }
 
-.projectResume{
+.projectResume {
     text-align: center;
     transition: all 0.7s ease;
 }
 
-.projectLink{
+.projectLink {
     text-decoration: none;
     cursor: url('../../public/images/atri.png'), auto;
 }
 
-.projectClick{
+.projectClick {
     text-align: center;
     margin-top: 0;
 }
@@ -157,18 +201,31 @@
 /* Responsive */
 
 @media (max-width: 800px) {
-    
+
     .ocupation {
         font-size: 18px;
         width: 387px;
     }
 
     .mainMenuButtons {
-        width: 300px;
+        width: 331px;
     }
 
     .mainMenuButtons button {
-        font-size: 15px;
+        font-size: 20px;
+    }
+
+    .homeArrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .homeArrow:nth-child(2) {
+        margin-top: -20px;
+    }
+
+    .homePage {
+        min-height: 400px;
     }
 
     .sectionTitle {
@@ -183,7 +240,7 @@
         font-size: 16px;
     }
 
-    .projectClick{
+    .projectClick {
         display: block;
     }
 
@@ -204,6 +261,19 @@
         font-size: 25px;
     }
 
+    .homeArrow {
+        width: 100px;
+        height: 100px;
+    }
+
+    .homeArrow:nth-child(2) {
+        margin-top: -50px;
+    }
+
+    .homePage {
+        min-height: 810px;
+    }
+
     .sectionTitle {
         font-size: 40px;
     }
@@ -216,7 +286,7 @@
         font-size: 22px;
     }
 
-    .projectClick{
+    .projectClick {
         display: none;
     }
 

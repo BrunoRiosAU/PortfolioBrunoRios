@@ -28,7 +28,7 @@ export default function HomePage() {
 
         <main className={styles.main}>
 
-            <div id="home">
+            <div id="home" className={styles.homePage}>
                 <div className={`${styles.ocupation} ${styles.textShadow}`}>
                     <h1 className={`${styles.inline} primary-text`}>Bruno Rios</h1>
                     <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primary-text`}>{ocupations[index]}</h1>
@@ -38,9 +38,14 @@ export default function HomePage() {
                     <button className="primary-text">My projects</button>
                     <button className="primary-text">About me </button>
                 </div>
+                <a className={styles.homeArrowBox} href="#projects">
+                    <div className={styles.homeArrow}/>
+                    <div className={styles.homeArrow}/>
+                </a>
+                
             </div>
 
-            <div id="projects">
+            <div id="projects" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Selected work</h2>
                 <div className={styles.projectsFrame}>
 
@@ -83,19 +88,19 @@ export default function HomePage() {
 
             </div>
 
-            <div id="knowledge">
+            <div id="knowledge" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>My knowledge</h2>
 
 
             </div>
 
-            <div id="about">
+            <div id="about" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>About me</h2>
 
 
             </div>
 
-            <div id="contact">
+            <div id="contact" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Contact me</h2>
 
 

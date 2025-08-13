@@ -12,18 +12,6 @@ export default function RootLayout({ children }) {
         setIsLoaded(true);
     }
 
-    function getWidth() {
-        useEffect(() => {
-            let width = window.innerWidth
-            return width;
-        })
-    }
-
-
-
-
-
-
     return (
         <html lang="en">
 
