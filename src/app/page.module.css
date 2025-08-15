@@ -127,6 +127,10 @@
     padding-top: 70px;
 }
 
+.sectionText {
+    font-size: 20px;
+}
+
 /* Projects */
 
 .projectsFrame {
@@ -144,14 +148,10 @@
     border: 2px var(--secondary-text-color) solid;
 }
 
-.principalProject:hover>a .projectTitle,
-.secondaryProject:hover>a .projectTitle {
-    text-shadow: 0px 2px 5px var(--secondary-text-color);
-}
-
-.principalProject:hover>a .projectResume,
-.secondaryProject:hover>a .projectResume {
-    text-shadow: 0px 5px 8px var(--secondary-text-color);
+.principalProject:hover>a .projectImage img,
+.secondaryProject:hover>a .projectImage img {
+    box-shadow: 0px 0px 30px var(--secondary-text-color);
+    transform: scale(102%);
 }
 
 .projectTitle {
@@ -166,6 +166,7 @@
 
 .projectImage img {
     width: 70%;
+    transition: all 0.7s ease;
 }
 
 .projectResume {
@@ -175,7 +176,7 @@
 
 .projectLink {
     text-decoration: none;
-    cursor: url('../../public/images/atri.png'), auto;
+
 }
 
 .projectClick {
@@ -187,11 +188,126 @@
 
 /* Knowledge */
 
+
+
+.knowledgeRow {
+    margin-bottom: 25px;
+}
+
+.knowledgeBox {
+    width: min-content;
+    height: min-content;
+    border: 1px var(--secondary-text-color) solid;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px var(--secondary-text-color);
+    margin-right: 15px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.knowledgeBoxText {
+    display: none;
+    margin: 0 3px 7px 3px;
+}
+
+
+
+.knowledgeBox img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
 /* About me */
 
 /* Contact */
 
+.contactBox {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.contactText {
+    position: absolute;
+    font-size: 25px;
+    width: max-content;
+    transition: all 0.5s ease;
+
+}
+
+
+.contactText:nth-of-type(2) {
+    animation-delay: -6000ms;
+}
+
+.contactText:nth-of-type(3) {
+    animation-delay: -12000ms;
+}
+
+.contactButton {
+    font-size: 40px;
+    background-color: transparent;
+    border: 2px var(--secondary-text-color) solid;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+
+}
+
+.contactButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 2px 20px var(--secondary-text-color);
+}
+
+.contactButton:hover~.contactText {
+    animation-play-state: paused;
+    text-shadow: 0px 0px 20px var(--secondary-text-color);
+
+}
+
+
+@keyframes contact-text-movement {
+    0% {
+        transform: translate(0px, 200px) rotate(0deg);
+    }
+
+    12.5% {
+        transform: translate(300px, 150px);
+    }
+
+    25% {
+        transform: translate(400px, 0px) rotate(10deg);
+    }
+
+    37.5% {
+        transform: translate(300px, -120px);
+    }
+
+    50% {
+        transform: translate(0px, -200px);
+    }
+
+    62.5% {
+        transform: translate(-300px, -120px);
+    }
+
+    75% {
+        transform: translate(-400px, 0px) rotate(-10deg);
+    }
+
+    87.5% {
+        transform: translate(-300px, 120px);
+    }
+
+    100% {
+        transform: translate(0px, 200px) rotate(0deg);
+    }
+}
 
 
 /* Responsive */
@@ -237,6 +353,10 @@
     }
 
     .projectClick {
+        display: block;
+    }
+
+    .knowledgeBoxText {
         display: block;
     }
 
@@ -286,6 +406,10 @@
         display: none;
     }
 
+    .knowledgeBox:hover>.knowledgeBoxText {
+        display: block;
+    }
+
 }
 
 
@@ -299,6 +423,23 @@
 
     .secondaryProject {
         width: auto;
+    }
+
+    .contactText:nth-of-type(1) {
+        rotate: -10deg;
+        top:10px;
+        left: 10px;
+    }
+
+    .contactText:nth-of-type(2) {
+        rotate: 5deg;
+        top: 70px;
+        right: 10px
+    }
+
+    .contactText:nth-of-type(3) {
+        rotate: 3deg;
+        bottom: 40px;
     }
 
 }
@@ -321,6 +462,9 @@
         font-size: 16px;
     }
 
+    .contactText {
+        animation: contact-text-movement 18s linear infinite;
+    }
 }
 
 @media (min-width: 1500px) {

@@ -1,12 +1,13 @@
-export default async function Projects(){
-        const proyects = await getProyects();
-        console.log(proyects)
+import { headers } from "next/headers";
+
+export default async function Projects() {
+    const proyects = await getProyects();
     return (<> <h1>My Projects</h1>
-    {proyects.map((project) =>{
-        return (
-            <h1>{project}</h1>
-        );
-    })}
+        {proyects.map((project) => {
+            return (
+                <h1 key={project}>{project}</h1>
+            );
+        })}
     </>)
 }
 
@@ -14,7 +15,9 @@ export default async function Projects(){
 
 
 async function getProyects() {
-    const req = await fetch(`http://localhost:3000/projectdata/projects.json`)
+    const headersList = headers();
+    const domain = (await headersList).get('host') || "";
+    const req = await fetch(`http://${domain}/projectdata/projects.json`)
     const data = await req.json();
     return data;
 }

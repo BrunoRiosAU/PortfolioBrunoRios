@@ -25,10 +25,9 @@ export default function HomePage() {
     }, []);
 
     return (
-
         <main className={styles.main}>
 
-            <div id="home" className={styles.homePage}>
+            <section id="home" className={styles.homePage}>
                 <div className={`${styles.ocupation} ${styles.textShadow}`}>
                     <h1 className={`${styles.inline} primary-text`}>Bruno Rios</h1>
                     <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primary-text`}>{ocupations[index]}</h1>
@@ -39,18 +38,19 @@ export default function HomePage() {
                     <button className="primary-text">About me </button>
                 </div>
                 <a className={styles.homeArrowBox} href="#projects">
-                    <div className={styles.homeArrow}/>
-                    <div className={styles.homeArrow}/>
+                    <div className={styles.homeArrow} />
+                    <div className={styles.homeArrow} />
                 </a>
-                
-            </div>
 
-            <div id="projects" className={styles.homeSection}>
-                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Selected work</h2>
+            </section>
+
+            <section id="projects" className={styles.homeSection}>
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Principal projects</h2>
+                <p className={`${styles.sectionText} primary-text`}>These are the principal projects I have worked on.</p>
                 <div className={styles.projectsFrame}>
 
                     <div className={styles.principalProject}>
-                        <a className={styles.projectLink} href="http://localhost:3000/projects/final">
+                        <a className={styles.projectLink} href="/projects/final">
                             <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
                             <div className={styles.projectImage}>
                                 <img src="images/taiga.jpg" />
@@ -62,7 +62,7 @@ export default function HomePage() {
 
                     <div className={styles.secondaryProjectBox}>
                         <div className={styles.secondaryProject}>
-                            <a className={styles.projectLink} href="http://localhost:3000/projects/final">
+                            <a className={styles.projectLink} href="/projects/final">
                                 <h1 className={`${styles.projectTitle} primary-text`}>dale don</h1>
                                 <div className={styles.projectImage}>
                                     <img src="images/taiga.jpg" />
@@ -74,7 +74,7 @@ export default function HomePage() {
 
 
                         <div className={styles.secondaryProject}>
-                            <a className={styles.projectLink} href="http://localhost:3000/projects/final">
+                            <a className={styles.projectLink} href="/projects/final">
                                 <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
                                 <div className={styles.projectImage}>
                                     <img src="images/taiga.jpg" />
@@ -86,26 +86,78 @@ export default function HomePage() {
                     </div>
                 </div>
 
-            </div>
+            </section>
 
-            <div id="knowledge" className={styles.homeSection}>
+            <section id="knowledge" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>My knowledge</h2>
+                <p className={`${styles.sectionText} primary-text`}>I have a good knowledge of the following languages and frameworks.</p>
+                <div className={styles.knowledgeRow}>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/atri.png" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/taiga.jpg" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                </div>
+                <div className={styles.knowledgeRow}>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/taiga.jpg" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                </div>
+
+                <p className={`${styles.sectionText} primary-text`}>I have a decent knowledge of the following languages and frameworks.</p>
+                <div className={styles.knowledgeRow}>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/atri.png" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/taiga.jpg" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                </div>
+                <div className={styles.knowledgeRow}>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/taiga.jpg" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                </div>
+
+                <p className={`${styles.sectionText} primary-text`}>I have a good knowledge of the following development tools.</p>
+                <div className={styles.knowledgeRow}>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/atri.png" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                    <div className={styles.knowledgeBox}>
+                        <img src="images/taiga.jpg" />
+                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                    </div>
+                </div>
 
 
-            </div>
+            </section>
 
-            <div id="about" className={styles.homeSection}>
+
+
+            <section id="about" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>About me</h2>
+                <p className={`${styles.sectionText} primary-text`}>Nose papu :'v</p>
 
+            </section>
 
-            </div>
-
-            <div id="contact" className={styles.homeSection}>
+            <section id="contact" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Contact me</h2>
-
-
-            </div>
+                <div className={styles.contactBox}>
+                    <button className={`${styles.contactButton} primary-text`}>Contact Me</button>  
+                    <p className={`${styles.contactText} primary-text`}>Did you like my projects?</p>
+                    <p className={`${styles.contactText} primary-text`}>Did you like my portfolio?</p>
+                    <p className={`${styles.contactText} primary-text`}>Do you want me to work with you?</p>
+                </div>
+            </section>
         </main>
-        
     );
 }

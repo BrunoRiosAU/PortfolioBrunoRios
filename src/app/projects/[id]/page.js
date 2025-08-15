@@ -1,4 +1,4 @@
-
+import { headers } from "next/headers";
 
 export default async function Project({params}) {
     const data = await params;
@@ -10,7 +10,9 @@ export default async function Project({params}) {
 }
 
 async function getProyect(id) {
-    const res = await fetch(`http://localhost:3000/projectdata/${id}.json`);
+    const headersList = headers();
+    const domain = (await headersList).get('host') || "";
+    const res = await fetch(`http://${domain}/projectdata/${id}.json`);
     const data = await res.json();
     return data;
 }
