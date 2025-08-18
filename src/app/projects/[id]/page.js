@@ -1,5 +1,6 @@
 import { headers } from "next/headers";
 
+
 export default async function Project({params}) {
     const data = await params;
     const proyect = await getProyect(data.id);
@@ -9,6 +10,7 @@ export default async function Project({params}) {
     <h1 className="primary-text"> Aaaaa {proyect.name}</h1></>)
 }
 
+
 async function getProyect(id) {
     const headersList = headers();
     const domain = (await headersList).get('host') || "";
@@ -16,6 +18,3 @@ async function getProyect(id) {
     const data = await res.json();
     return data;
 }
-
-
-
