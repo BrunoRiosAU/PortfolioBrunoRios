@@ -18,3 +18,11 @@ async function getProyect(id) {
     const data = await res.json();
     return data;
 }
+
+
+
+
+
+
+
+
