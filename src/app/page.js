@@ -24,6 +24,7 @@ export default function HomePage() {
         return () => clearInterval(interval);
     }, []);
 
+    
     return (
         <main className={styles.main}>
 
