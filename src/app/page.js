@@ -2,13 +2,11 @@
 import styles from "./page.module.css";
 import { useEffect, useState } from 'react';
 
-
 const ocupations = [
     'Front End',
     'Back End',
     'Full Stack'
 ];
-
 
 export default function HomePage() {
 
@@ -24,7 +22,7 @@ export default function HomePage() {
         return () => clearInterval(interval);
     }, []);
 
-    
+
     return (
         <main className={styles.main}>
 
