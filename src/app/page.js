@@ -8,6 +8,8 @@ const ocupations = [
     'Full Stack'
 ];
 
+
+
 export default function HomePage() {
 
     const [index, setIndex] = useState(0);
