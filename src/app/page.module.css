@@ -223,6 +223,10 @@
 
 /* About me */
 
+.aboutimage{
+    
+}
+
 /* Contact */
 
 .contactBox {
@@ -235,20 +239,13 @@
 
 .contactText {
     position: absolute;
-    font-size: 25px;
     width: max-content;
     transition: all 0.5s ease;
 
 }
 
 
-.contactText:nth-of-type(2) {
-    animation-delay: -6000ms;
-}
 
-.contactText:nth-of-type(3) {
-    animation-delay: -12000ms;
-}
 
 .contactButton {
     font-size: 40px;
@@ -265,48 +262,8 @@
 }
 
 .contactButton:hover~.contactText {
-    animation-play-state: paused;
+    transform: scale(1.05);
     text-shadow: 0px 0px 20px var(--secondary-text-color);
-
-}
-
-
-@keyframes contact-text-movement {
-    0% {
-        transform: translate(0px, 200px) rotate(0deg);
-    }
-
-    12.5% {
-        transform: translate(300px, 150px);
-    }
-
-    25% {
-        transform: translate(400px, 0px) rotate(10deg);
-    }
-
-    37.5% {
-        transform: translate(300px, -120px);
-    }
-
-    50% {
-        transform: translate(0px, -200px);
-    }
-
-    62.5% {
-        transform: translate(-300px, -120px);
-    }
-
-    75% {
-        transform: translate(-400px, 0px) rotate(-10deg);
-    }
-
-    87.5% {
-        transform: translate(-300px, 120px);
-    }
-
-    100% {
-        transform: translate(0px, 200px) rotate(0deg);
-    }
 }
 
 
@@ -360,6 +317,27 @@
         display: block;
     }
 
+    .contactText {
+        font-size: 20px;
+    }
+
+    .contactText:nth-of-type(1) {
+        rotate: -7deg;
+        top: 10px;
+        left: 10%;
+    }
+
+    .contactText:nth-of-type(2) {
+        rotate: 5deg;
+        top: 70px;
+        right: 10%;
+    }
+
+    .contactText:nth-of-type(3) {
+        rotate: 3deg;
+        bottom: 60px;
+    }
+
 }
 
 @media (min-width: 801px) {
@@ -410,6 +388,26 @@
         display: block;
     }
 
+    .contactText {
+        font-size: 25px;
+    }
+
+    .contactText:nth-of-type(1) {
+        rotate: -10deg;
+        top: 10px;
+        left: 20%;
+    }
+
+    .contactText:nth-of-type(2) {
+        rotate: 5deg;
+        top: 70px;
+        right: 20%;
+    }
+
+    .contactText:nth-of-type(3) {
+        rotate: 3deg;
+        bottom: 40px;
+    }
 }
 
 
@@ -423,23 +421,6 @@
 
     .secondaryProject {
         width: auto;
-    }
-
-    .contactText:nth-of-type(1) {
-        rotate: -10deg;
-        top:10px;
-        left: 10px;
-    }
-
-    .contactText:nth-of-type(2) {
-        rotate: 5deg;
-        top: 70px;
-        right: 10px
-    }
-
-    .contactText:nth-of-type(3) {
-        rotate: 3deg;
-        bottom: 40px;
     }
 
 }
@@ -462,9 +443,6 @@
         font-size: 16px;
     }
 
-    .contactText {
-        animation: contact-text-movement 18s linear infinite;
-    }
 }
 
 @media (min-width: 1500px) {

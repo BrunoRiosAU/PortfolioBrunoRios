@@ -147,6 +147,7 @@ export default function HomePage() {
 
             <section id="about" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>About me</h2>
+                <img className={styles.aboutImage} src="images/subaru/jpg"/>
                 <p className={`${styles.sectionText} primary-text`}>Nose papu :'v</p>
 
             </section>
