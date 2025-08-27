@@ -25,7 +25,7 @@ export default function HomePage() {
     }, []);
 
 
-    
+
     return (
         <main className={styles.main}>
 
@@ -147,15 +147,23 @@ export default function HomePage() {
 
             <section id="about" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>About me</h2>
-                <img className={styles.aboutImage} src="images/subaru/jpg"/>
-                <p className={`${styles.sectionText} primary-text`}>Nose papu :'v</p>
+                <div className={styles.aboutImage}>
+                    <img src="images/subaru.jpg" />
+                    <div className={styles.aboutText}>
+                        <p className={`primary-text`}>I'm a fan of motorsports and enjoy playing driving simulator games and doing car mechanics in my free time.</p>
+                        <p className={`primary-text`}>I've loved everything related to technology since I was a child.</p>
+                        <p className={`primary-text`}>What I love most about programming is being able to apply it to my everyday life so I can do personal projects and help my friends and family.</p>
+                    </div>
+
+                    <button className={`${styles.aboutButton} primary-text`}>Learn more about me</button>
+                </div>
 
             </section>
 
             <section id="contact" className={styles.homeSection}>
                 <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Contact me</h2>
                 <div className={styles.contactBox}>
-                    <button className={`${styles.contactButton} primary-text`}>Contact Me</button>  
+                    <button className={`${styles.contactButton} primary-text`}>Contact Me</button>
                     <p className={`${styles.contactText} primary-text`}>Did you like my projects?</p>
                     <p className={`${styles.contactText} primary-text`}>Did you like my portfolio?</p>
                     <p className={`${styles.contactText} primary-text`}>Do you want me to work with you?</p>

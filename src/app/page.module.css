@@ -223,15 +223,46 @@
 
 /* About me */
 
-.aboutimage{
-    
+.aboutImage {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px var(--primary-text-color);
+    border-radius: 10px;
+}
+
+.aboutImage img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.aboutText{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.aboutButton{
+    position: absolute;
+    background: rgba(17, 17, 17, 0.6);
+    border-radius: 20px;
+    border-color: transparent;
+    transition: all 0.7s ease;
+}
+
+.aboutButton:hover{
+    box-shadow: 0 0 10px 2px var(--primary-text-color);
 }
 
 /* Contact */
 
 .contactBox {
     position: relative;
-    min-height: 400px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,9 +274,6 @@
     transition: all 0.5s ease;
 
 }
-
-
-
 
 .contactButton {
     font-size: 40px;
@@ -317,25 +345,36 @@
         display: block;
     }
 
+    .aboutButton{
+        font-size: 20px;
+        bottom: 10px;
+        right: 5px;
+    }
+
+    .aboutText{
+        font-size: 16px;
+        left: 15px;
+    }
+
     .contactText {
         font-size: 20px;
     }
 
     .contactText:nth-of-type(1) {
         rotate: -7deg;
-        top: 10px;
+        top: 30px;
         left: 10%;
     }
 
     .contactText:nth-of-type(2) {
         rotate: 5deg;
-        top: 70px;
+        top: 120px;
         right: 10%;
     }
 
     .contactText:nth-of-type(3) {
         rotate: 3deg;
-        bottom: 60px;
+        bottom: 100px;
     }
 
 }
@@ -388,6 +427,16 @@
         display: block;
     }
 
+    .aboutButton{
+        font-size: 30px;
+        bottom: 10px;
+        right: 15px;
+    }
+
+    .aboutText{
+        font-size: 22px;
+    }
+
     .contactText {
         font-size: 25px;
     }
@@ -423,6 +472,14 @@
         width: auto;
     }
 
+    .aboutImage{
+        width: 95%;
+    }
+
+    .aboutText{
+        max-width: 95%;
+    }
+
 }
 
 @media (min-width: 1201px) {
@@ -443,6 +500,14 @@
         font-size: 16px;
     }
 
+    .aboutImage{
+        width: 80%;
+    }
+
+    .aboutText{
+        max-width: 60%;
+    }
+
 }
 
 @media (min-width: 1500px) {
@@ -455,4 +520,18 @@
         font-size: 22px;
     }
 
+}
+
+@media (max-width: 530px) {
+    .aboutButton{
+        bottom: -50px;
+        left: 50%;
+        transform:translateX(-50%);
+        width: max-content;
+        border-color: var(--secondary-text-color);
+    }
+
+    .aboutText{
+        font-size: 14px;
+    }
 }
