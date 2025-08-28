@@ -24,6 +24,9 @@ export default function HomePage() {
         return () => clearInterval(interval);
     }, []);
 
+    const goProjects = () => { location.href = '/projects' }
+    const goAbout = () => { location.href = '/about' }
+    const goContact = () => { location.href = '/contact' }
 
 
     return (
@@ -31,13 +34,13 @@ export default function HomePage() {
 
             <section id="home" className={styles.homePage}>
                 <div className={`${styles.ocupation} ${styles.textShadow}`}>
-                    <h1 className={`${styles.inline} primary-text`}>Bruno Rios</h1>
-                    <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primary-text`}>{ocupations[index]}</h1>
+                    <h1 className={`${styles.inline} primaryText`}>Bruno Rios</h1>
+                    <h1 key={animationKey} className={`${styles.inline} ${styles.showOcupation} primaryText`}>{ocupations[index]}</h1>
                 </div>
 
                 <div className={`${styles.mainMenuButtons}`}>
-                    <button className="primary-text">My projects</button>
-                    <button className="primary-text">About me </button>
+                    <button onClick={goProjects} className="primaryText">My projects</button>
+                    <button onClick={goAbout} className="primaryText">About me </button>
                 </div>
                 <a className={styles.homeArrowBox} href="#projects">
                     <div className={styles.homeArrow} />
@@ -47,42 +50,42 @@ export default function HomePage() {
             </section>
 
             <section id="projects" className={styles.homeSection}>
-                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Principal projects</h2>
-                <p className={`${styles.sectionText} primary-text`}>These are the principal projects I have worked on.</p>
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primaryText`}>Principal projects</h2>
+                <p className={`${styles.sectionText} primaryText`}>These are the principal projects I have worked on.</p>
                 <div className={styles.projectsFrame}>
 
                     <div className={styles.principalProject}>
                         <a className={styles.projectLink} href="/projects/final">
-                            <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
+                            <h1 className={`${styles.projectTitle} primaryText`}>dale</h1>
                             <div className={styles.projectImage}>
                                 <img src="images/taiga.jpg" />
                             </div>
-                            <p className={`${styles.projectClick} secondary-text`}>Touch to see more</p>
-                            <p className={`${styles.projectResume} primary-text`}>Resume</p>
+                            <p className={`${styles.projectClick} secondaryText`}>Touch to see more</p>
+                            <p className={`${styles.projectResume} primaryText`}>Resume</p>
                         </a>
                     </div>
 
                     <div className={styles.secondaryProjectBox}>
                         <div className={styles.secondaryProject}>
                             <a className={styles.projectLink} href="/projects/final">
-                                <h1 className={`${styles.projectTitle} primary-text`}>dale don</h1>
+                                <h1 className={`${styles.projectTitle} primaryText`}>dale don</h1>
                                 <div className={styles.projectImage}>
                                     <img src="images/taiga.jpg" />
                                 </div>
-                                <p className={`${styles.projectClick} secondary-text`}>Touch to see more</p>
-                                <p className={`${styles.projectResume} primary-text`}>mesi</p>
+                                <p className={`${styles.projectClick} secondaryText`}>Touch to see more</p>
+                                <p className={`${styles.projectResume} primaryText`}>mesi</p>
                             </a>
                         </div>
 
 
                         <div className={styles.secondaryProject}>
                             <a className={styles.projectLink} href="/projects/final">
-                                <h1 className={`${styles.projectTitle} primary-text`}>dale</h1>
+                                <h1 className={`${styles.projectTitle} primaryText`}>dale</h1>
                                 <div className={styles.projectImage}>
                                     <img src="images/taiga.jpg" />
                                 </div>
-                                <p className={`${styles.projectClick} secondary-text`}>Touch to see more</p>
-                                <p className={`${styles.projectResume} primary-text`}>Resume</p>
+                                <p className={`${styles.projectClick} secondaryText`}>Touch to see more</p>
+                                <p className={`${styles.projectResume} primaryText`}>Resume</p>
                             </a>
                         </div>
                     </div>
@@ -91,52 +94,52 @@ export default function HomePage() {
             </section>
 
             <section id="knowledge" className={styles.homeSection}>
-                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>My knowledge</h2>
-                <p className={`${styles.sectionText} primary-text`}>I have a good knowledge of the following languages and frameworks.</p>
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primaryText`}>My knowledge</h2>
+                <p className={`${styles.sectionText} primaryText`}>I have a good knowledge of the following languages and frameworks.</p>
                 <div className={styles.knowledgeRow}>
                     <div className={styles.knowledgeBox}>
                         <img src="images/atri.png" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                     <div className={styles.knowledgeBox}>
                         <img src="images/taiga.jpg" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                 </div>
                 <div className={styles.knowledgeRow}>
                     <div className={styles.knowledgeBox}>
                         <img src="images/taiga.jpg" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                 </div>
 
-                <p className={`${styles.sectionText} primary-text`}>I have a decent knowledge of the following languages and frameworks.</p>
+                <p className={`${styles.sectionText} primaryText`}>I have a decent knowledge of the following languages and frameworks.</p>
                 <div className={styles.knowledgeRow}>
                     <div className={styles.knowledgeBox}>
                         <img src="images/atri.png" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                     <div className={styles.knowledgeBox}>
                         <img src="images/taiga.jpg" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                 </div>
                 <div className={styles.knowledgeRow}>
                     <div className={styles.knowledgeBox}>
                         <img src="images/taiga.jpg" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                 </div>
 
-                <p className={`${styles.sectionText} primary-text`}>I have a good knowledge of the following development tools.</p>
+                <p className={`${styles.sectionText} primaryText`}>I have a good knowledge of the following development tools.</p>
                 <div className={styles.knowledgeRow}>
                     <div className={styles.knowledgeBox}>
                         <img src="images/atri.png" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                     <div className={styles.knowledgeBox}>
                         <img src="images/taiga.jpg" />
-                        <p className={`${styles.knowledgeBoxText} secondary-text`}>gaasaaa funado papy</p>
+                        <p className={`${styles.knowledgeBoxText} secondaryText`}>gaasaaa funado papy</p>
                     </div>
                 </div>
 
@@ -146,27 +149,27 @@ export default function HomePage() {
 
 
             <section id="about" className={styles.homeSection}>
-                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>About me</h2>
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primaryText`}>About me</h2>
                 <div className={styles.aboutImage}>
                     <img src="images/subaru.jpg" />
                     <div className={styles.aboutText}>
-                        <p className={`primary-text`}>I'm a fan of motorsports and enjoy playing driving simulator games and doing car mechanics in my free time.</p>
-                        <p className={`primary-text`}>I've loved everything related to technology since I was a child.</p>
-                        <p className={`primary-text`}>What I love most about programming is being able to apply it to my everyday life so I can do personal projects and help my friends and family.</p>
+                        <p className={`primaryText`}>I'm a fan of motorsports and enjoy playing driving simulator games and doing car mechanics in my free time.</p>
+                        <p className={`primaryText`}>I've loved everything related to technology since I was a child.</p>
+                        <p className={`primaryText`}>What I love most about programming is being able to apply it to my everyday life so I can do personal projects and help my friends and family.</p>
                     </div>
 
-                    <button className={`${styles.aboutButton} primary-text`}>Learn more about me</button>
+                    <button className={`${styles.aboutButton} primaryText`}>Learn more about me</button>
                 </div>
 
             </section>
 
             <section id="contact" className={styles.homeSection}>
-                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primary-text`}>Contact me</h2>
+                <h2 className={`${styles.textShadow} ${styles.sectionTitle} primaryText`}>Contact me</h2>
                 <div className={styles.contactBox}>
-                    <button className={`${styles.contactButton} primary-text`}>Contact Me</button>
-                    <p className={`${styles.contactText} primary-text`}>Did you like my projects?</p>
-                    <p className={`${styles.contactText} primary-text`}>Did you like my portfolio?</p>
-                    <p className={`${styles.contactText} primary-text`}>Do you want me to work with you?</p>
+                    <button onClick={goContact} className={`${styles.contactButton} primaryText`}>Contact Me</button>
+                    <p className={`${styles.contactText} primaryText`}>Did you like my projects?</p>
+                    <p className={`${styles.contactText} primaryText`}>Did you like my portfolio?</p>
+                    <p className={`${styles.contactText} primaryText`}>Do you want me to work with you?</p>
                 </div>
             </section>
         </main>

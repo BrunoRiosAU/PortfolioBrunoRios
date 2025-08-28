@@ -79,19 +79,19 @@
 @keyframes arrow-movement {
     0% {
 
-        top: 80px;
+        top: 120px;
 
     }
 
     50% {
 
-        top: 150px;
+        top: 200px;
 
     }
 
     100% {
 
-        top: 80px;
+        top: 120px;
 
     }
 }
@@ -124,7 +124,7 @@
 /* Sections */
 
 .homeSection {
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 .sectionText {
@@ -236,7 +236,7 @@
     opacity: 0.5;
 }
 
-.aboutText{
+.aboutText {
     position: absolute;
     top: 0;
     left: 30px;
@@ -246,7 +246,7 @@
     height: 100%;
 }
 
-.aboutButton{
+.aboutButton {
     position: absolute;
     background: rgba(17, 17, 17, 0.6);
     border-radius: 20px;
@@ -254,7 +254,7 @@
     transition: all 0.7s ease;
 }
 
-.aboutButton:hover{
+.aboutButton:hover {
     box-shadow: 0 0 10px 2px var(--primary-text-color);
 }
 
@@ -345,13 +345,13 @@
         display: block;
     }
 
-    .aboutButton{
+    .aboutButton {
         font-size: 20px;
         bottom: 10px;
         right: 5px;
     }
 
-    .aboutText{
+    .aboutText {
         font-size: 16px;
         left: 15px;
     }
@@ -427,13 +427,13 @@
         display: block;
     }
 
-    .aboutButton{
+    .aboutButton {
         font-size: 30px;
         bottom: 10px;
         right: 15px;
     }
 
-    .aboutText{
+    .aboutText {
         font-size: 22px;
     }
 
@@ -472,11 +472,11 @@
         width: auto;
     }
 
-    .aboutImage{
+    .aboutImage {
         width: 95%;
     }
 
-    .aboutText{
+    .aboutText {
         max-width: 95%;
     }
 
@@ -500,11 +500,11 @@
         font-size: 16px;
     }
 
-    .aboutImage{
+    .aboutImage {
         width: 80%;
     }
 
-    .aboutText{
+    .aboutText {
         max-width: 60%;
     }
 
@@ -523,15 +523,15 @@
 }
 
 @media (max-width: 530px) {
-    .aboutButton{
+    .aboutButton {
         bottom: -50px;
         left: 50%;
-        transform:translateX(-50%);
+        transform: translateX(-50%);
         width: max-content;
         border-color: var(--secondary-text-color);
     }
 
-    .aboutText{
+    .aboutText {
         font-size: 14px;
     }
 }
