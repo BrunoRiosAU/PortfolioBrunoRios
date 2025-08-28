@@ -1,4 +1,121 @@
-.test{
-    margin-top: 5%;
-    background-color: red;
+.contactTitle {
+    margin-top: 120px;
+    font-size: 40px;
+    text-align: center;
+    transition: all 0.7s;
+}
+
+.contactTitle:hover {
+    text-shadow: 0px 5px 20px var(--secondary-text-color);
+}
+
+.formContainer {
+    margin: 30px;
+}
+
+.contactForm {
+    border: 2px solid var(--secondary-text-color);
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.formName,
+.formSurname,
+.formEmail,
+.formReason,
+.formText,
+.formSubmit {
+    background-color: transparent;
+    border: 1px solid var(--secondary-text-color);
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 20px;
+    transition: all 0.7s;
+
+}
+
+.formName,
+.formSurname,
+.formEmail,
+.formReason,
+.formText {
+    margin-bottom: 33px;
+}
+
+.formName:hover,
+.formSurname:hover,
+.formEmail:hover,
+.formReason:hover,
+.formText:hover {
+    box-shadow: 0px 0px 5px 2px var(--secondary-text-color);
+}
+
+.formFullName {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.formFullName input {
+    width: 100%;
+}
+
+.formName {
+    width: 60% !important;
+}
+
+.formText {
+    resize: none;
+    field-sizing: content;
+    min-height: 100px;
+}
+
+.formSubmit:hover {
+    box-shadow: 0px 0px 10px 2px var(--primary-text-color);
+}
+
+.animation {
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -350px;
+}
+
+.sentAnimation{
+    animation: sentAnimation 4s ease;
+}
+
+.animation p{
+    font-size: 50px;
+    width: max-content;
+}
+
+.animationIcon{
+    position:fixed;
+    width: 300px;
+    height: 300px;
+    bottom:70px;
+
+}
+
+@keyframes sentAnimation {
+    0%{
+        bottom: -350px;
+    }
+    30%{
+        bottom: 40%;
+    }
+    70%{
+        bottom: 40%;
+    }
+    100%{
+        bottom: 150%;
+    }
 }

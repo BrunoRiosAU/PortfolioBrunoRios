@@ -16,6 +16,7 @@ export default function HomePage() {
     const [animationKey, setAnimationKey] = useState(0);
 
     useEffect(() => {
+        
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % ocupations.length);
             setAnimationKey((prev) => prev + 1);
