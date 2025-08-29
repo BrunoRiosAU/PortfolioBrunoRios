@@ -1,24 +1,42 @@
-import { headers } from "next/headers";
+"use client";
+import { useEffect, useState } from "react";
+import styles from "./page.module.css";
+import { List, Grid2X2 } from "lucide-react";
+import { getProyects } from "./getProjects";
 
-export default async function Projects() {
-    const proyects = await getProyects();
-    return (<> <h1>My Projects</h1>
-        {proyects.map((project) => {
-            return (
-                <h1 key={project}>{project}</h1>
-            );
-        })}
-    </>)
+export default function Projects() {
+  const [grid, setGrid] = useState(true);
+  const [projects, setProjects] = useState([]);
+
+  function toggleProjectGrid() {
+    setGrid(!grid);
+  }
+
+  useEffect(() => {
+    async function loadProjects() {
+      const data = await getProyects();
+      setProjects(data);
+    }
+    loadProjects();
+  }, []);
+
+  return (
+    <>
+      <h1 className={`${styles.projectsTitle} primaryText`}>My projects</h1>
+      <div className={styles.projectsBox}>
+        <div className={styles.projectFilters}>
+          <button className={`${styles.seeListButton} ${!grid ? styles.selectedButton : ""}`} onClick={toggleProjectGrid} disabled={!grid ? true : false}>
+            <List className={styles.seeListIcon} color="white" size={30} />
+          </button>
+          <button className={`${styles.seeListButton} ${grid ? styles.selectedButton : ""}`} onClick={toggleProjectGrid} disabled={grid ? true : false}>
+            <Grid2X2 className={styles.seeListIcon} color="white" size={30} />
+          </button>
+        </div>
+
+        <div className={styles.projectList}>
+          {projects.map((project, i) => <h1 key={i}>{project}</h1>)}
+        </div>
+      </div>
+    </>
+  );
 }
-
-
-
-
-async function getProyects() {
-    const headersList = headers();
-    const domain = (await headersList).get('host') || "";
-    const req = await fetch(`http://${domain}/projectdata/projects.json`)
-    const data = await req.json();
-    return data;
-}
-
