@@ -34,4 +34,12 @@
 .projectList{
     border: 1px solid var(--secondary-text-color);
     height: 300px;
+
+}
+
+.projectBox{
+    border: 1px solid red;
+    width: 40%;
+    display: inline-flex;
+    
 }
