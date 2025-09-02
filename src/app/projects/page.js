@@ -23,9 +23,7 @@ export default function Projects() {
             <Grid2X2 className={styles.seeListIcon} color="white" size={30} />
           </button>
         </div>
-        <div className={styles.projectList}>
           {ProjectsDisplay(grid)}
-        </div>
       </div>
     </>
   );

@@ -9,37 +9,133 @@
     text-shadow: 0px 5px 20px var(--secondary-text-color);
 }
 
-.projectsBox{
-    
+.projectsBox {
+
     margin: 50px 5%
 }
 
-.projectFilters{
-    
+.projectFilters {
+
     height: 50px;
 }
 
 
-.seeListButton{
+.seeListButton {
     background-color: transparent;
     margin-right: 15px;
     border-color: transparent;
 }
 
-.selectedButton{
+.selectedButton {
     border-color: var(--primary-text-color);
     border-radius: 10px;
 }
 
-.projectList{
+.projectGrid,
+.projectList {
     border: 1px solid var(--secondary-text-color);
-    height: 300px;
+    border-radius: 20px;
+}
+
+.projectBoxDisplay,
+.projectListDisplay {
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 20px;
+    background-color: var(--background-color);
+    transition: 0.5s all;
+    padding: 10px;
+}
+
+.projectBoxTitle {
+    margin-left: 5%;
+}
+
+.projectBoxDisplay:hover {
+    z-index: 1;
+    transform: scale(108%);
+    box-shadow: 0px 0px 10px 5px var(--secondary-text-color);
+}
+
+.projectBoxImage {
+    display: flex;
+    justify-content: center;
+    transition: 0.5s all;
+}
+
+.projectBoxImage img {
+    width: 80%;
+}
+
+.projectBoxDesc {
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.projectListTitle {
+    margin-left: 2%;
 
 }
 
-.projectBox{
-    border: 1px solid red;
-    width: 40%;
-    display: inline-flex;
-    
+.projectListDesc {
+    margin-left: 2%;
+}
+
+.projectListImage {
+    position: relative;
+
+}
+
+.projectListImage img {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    transition: 0.5s all;
+}
+
+
+.projectListDisplay {
+    overflow: hidden;
+    height: 120px;
+
+}
+
+.projectListDisplay:hover {
+    height: 330px;
+}
+
+.projectRedirect{
+    text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .projectListImage img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 801px) {
+    .projectGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+
+    }
+
+}
+
+@media (min-width: 1001px) {
+
+    .projectListImage img:hover {
+        transform: scale(150%) translateX(-34%) translateY(-10%);
+    }
+
+    .projectListImage img {
+        width: 300px;
+    }
+
 }

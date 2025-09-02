@@ -1,5 +1,5 @@
 "use client"
-import { getProyects } from "../app/projects/getProjects";
+import { getProjects } from "../app/projects/getProjects";
 import { useEffect, useState } from "react";
 import styles from "../app/projects/page.module.css"
 
@@ -10,7 +10,7 @@ export default function ProjectsDisplay(grid) {
 
     useEffect(() => {
         async function loadProjects() {
-            const data = await getProyects();
+            const data = await getProjects();
             setProjects(data);
         }
         loadProjects();
@@ -18,23 +18,37 @@ export default function ProjectsDisplay(grid) {
 
     if (grid) {
         return (
-            <>
-                {projects.map((project, i) =>
-                    <div key={i} className={styles.projectBox}>
-                        <h1 className="primaryText">{project}</h1>
-                    </div>
+            <div className={styles.projectGrid}>
+                {Object.entries(projects).map(([key, value]) => (
+                    <div key={key} className={styles.projectBoxDisplay}>
+                        <a className={styles.projectRedirect} href={`/projects/${value.id}`}>
+                            <h1 className={`${styles.projectBoxTitle} primaryText`}>{value.title}</h1>
+                            <div className={styles.projectBoxImage}>
+                                <img src={value.img} />
+                            </div>
+                            <p className={`${styles.projectBoxDesc} primaryText`}>{value.desc}</p>
+                        </a>
 
-                )}
-            </>
+                    </div>
+                ))}
+            </div>
         );
     }
 
     return (
-        <>
-            <p className="primaryText">List</p>
-            {projects.map((project, i) =>
-                <h1 className="primaryText" key={i}>{project}</h1>
-            )}
-        </>
+        <div className={styles.projectList}>
+            {Object.entries(projects).map(([key, value]) => (
+                <div key={key} className={styles.projectListDisplay}>
+                    <a className={styles.projectRedirect} href={`/projects/${value.id}`}>
+                        <h1 className={`${styles.projectListTitle} primaryText`}>{value.title}</h1>
+                        <p className={`${styles.projectListDesc} primaryText`}>{value.desc}</p>
+                        <div className={styles.projectListImage}>
+                            <img src={value.img} />
+                        </div>
+                    </a>
+
+                </div>
+            ))}
+        </div>
     );
 }

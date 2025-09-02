@@ -1,22 +1,34 @@
-import { headers } from "next/headers";
+import { getProjects } from "../getProjects";
+import PageNotFound from "../../../components/pageNotFound"
+import styles from "./page.module.css"
 
-
-export default async function Project({params}) {
+export default async function Project({ params }) {
     const data = await params;
-    const proyect = await getProyect(data.id);
+    const project = await getProject(data.id);
+    if (!project) {
+        return (
+            <PageNotFound/>
+        )
+    }
 
     return (<>
-    <p>mesi</p>
-    <h1 className="primary-text"> Aaaaa {proyect.name}</h1></>)
+        <p className="primaryText">mesi</p>
+        <p className="primaryText">mesi</p>
+        <p className="primaryText">mesi</p>
+        <p className="primaryText">mesi</p>
+        <h1 className="primaryText"> Aaaaa {project.title}</h1></>)
 }
 
 
-async function getProyect(id) {
-    const headersList = headers();
-    const domain = (await headersList).get('host') || "";
-    const res = await fetch(`http://${domain}/projectdata/${id}.json`);
-    const data = await res.json();
-    return data;
+async function getProject(id) {
+    const projects = await getProjects();
+    for (const [key, value] of Object.entries(projects)) {
+        if (value.id == id) {
+
+            return value;
+        }
+    }
+    return null;
 }
 
 
